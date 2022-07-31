@@ -1,6 +1,7 @@
 // Обнуляющий CSS стиль ============================================================
 @import "_zero";
 // ШРИФТЫ ==========================================================================
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 // Шрифт по умолчанию ==============================================================
 // ОБОЛОЧКА ========================================================================
 // Шаблоны =========================================================================
@@ -8,7 +9,7 @@
 // Миксины
 // Основной блок контетна ==========================================================
 body {
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: Roboto;
 }
 .wrapper {
     height: 100%;
@@ -16,6 +17,196 @@ body {
     flex-direction: column;
 }
 .container {
-    max-width: 1180px;
+    max-width: 1160px;
     margin: 0 auto ;
 }
+
+.header {
+    flex: 0 0 auto;
+    background-color: #22252C;
+}
+.header__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+}
+.logo-header {}
+.logo-header__row {
+    display: flex;
+}
+.header__img {
+    padding: 22px 20px 20.38px 0;
+}
+.header__button {
+    margin: 16px 0 17px 0;
+    line-height: 12px;
+    font-weight: 900;
+    font-size: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    a {
+        display: inline-block;
+        border: 1px solid #FFFFFF;
+        padding: 17px 35.82px 16px 35.82px;
+        color: #FFFFFF;
+        &:hover {
+            background-color: #FFFFFF;
+            color: #22252C;
+        }
+    }
+}
+.button-header {}
+
+.header__nav {}
+.nav-header {}
+.nav-header__row {
+    display: flex;
+}
+.nav-header__item {
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    a {
+        color: #FFFFFF;
+        display: inline-block;
+        padding: 32px 35px;
+        &:hover {
+            background-color: #ffffff;
+            color: #22252C;
+        }
+    }
+}
+
+.nav-header__row li:last-child {
+    color: red;
+}
+
+
+/*.nav-header__item--img {
+    max-width: -2px 0 -2.49px 0;
+    background: url()
+    &:hover {
+
+    }
+}*/
+
+.body {
+    flex: 1 1 auto;
+}
+
+
+.img-title {}
+.container {}
+.img-title__row {
+    display: flex;
+    justify-content: space-between;
+}
+.img-title__item {
+    margin: 50px 0 100px 0;
+}
+
+
+.device {}
+.device__row {
+    display: flex;
+}
+.device__desc {}
+.device__title {}
+
+
+.title {}
+.device__text {}
+.devise__img {}
+
+
+.catalog {}
+.catalog__title {}
+.catalog__content {}
+.catalog__row {
+    display: flex;
+}
+.catalog__item {}
+
+
+.item {}
+.item__row {
+    display: flex;
+}
+.item__img {}
+.item__description {}
+.item__catalog-title {}
+.item__catalog-subtitle {}
+.catalog__button {}
+.button {}
+
+
+.reviews {}
+.reviews__title {}
+.reviews__content {}
+.reviews__row {
+    display: flex;
+}
+.reviews__item {}
+.item-review {}
+.item-review__row {
+    display: flex;
+}
+.item-review__title {}
+.title-review {}
+.title-review__row {
+    display: flex;
+}
+.title-review__title {}
+.title-review__data {}
+.item-review__text {}
+.item-review__img {}
+.img-rewiew {}
+.img-rewiew__row {
+    display: flex;
+}
+.img-rewiew__item {}
+.item-review__suptitle {}
+.reviews__button {}
+
+
+.info {}
+.info__row {
+    display: flex;
+}
+.info__item {}
+.item-info {}
+.item-info__img {}
+.item-info__content {}
+.item-info__title {}
+.item-info__text {}
+
+
+
+.footer {
+    flex: 0 0 auto;
+}
+
+.footer__row {
+    display: flex;
+}
+.footer__logo {}
+.logo-footer {}
+.logo-footer__row {
+    display: flex;
+}
+.logo-footer__img {}
+.logo-footer__button {}
+.logo-footer__vk {}
+.footer__nav {}
+.nav-footer {}
+.nav-footer__row {
+    display: flex;
+}
+.nav-footer__item {}
+.nav-footer__title-item {}
+.nav-footer__text-item {}
