@@ -1,7 +1,8 @@
 // Обнуляющий CSS стиль ============================================================
 @import "_zero";
 // ШРИФТЫ ==========================================================================
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+
 // Шрифт по умолчанию ==============================================================
 // ОБОЛОЧКА ========================================================================
 // Шаблоны =========================================================================
@@ -10,6 +11,7 @@
 // Основной блок контетна ==========================================================
 body {
     font-family: Roboto;
+    color: #22252C;
 }
 .wrapper {
     height: 100%;
@@ -60,10 +62,13 @@ body {
 }
 .button-header {}
 
-.header__nav {}
-.nav-header {}
+.header__nav {
+}
+.nav-header {
+}
 .nav-header__row {
     display: flex;
+    position: relative;
 }
 .nav-header__item {
     font-weight: 900;
@@ -81,96 +86,251 @@ body {
         }
     }
 }
-
-.nav-header__row li:last-child {
-    color: red;
-}
-
-
-/*.nav-header__item--img {
-    max-width: -2px 0 -2.49px 0;
-    background: url()
-    &:hover {
-
+.nav-header__img a{
+    display: inline-block;
+    width: 101px;
+    height: 100%;
+    padding: 30px 35px 29.51px 35px;
+    background: url(/img/header/Component\ 17.png) center no-repeat;
+    &:hover{
+        background:#ffffff url(/img/header/Component\ 18.png) center no-repeat;
     }
-}*/
+}
 
 .body {
     flex: 1 1 auto;
 }
 
-
+// Шапка фотографий под хедером
 .img-title {}
 .container {}
 .img-title__row {
     display: flex;
     justify-content: space-between;
 }
-.img-title__item {
+.img-title__item1 a {
+    display: inline-block;
     margin: 50px 0 100px 0;
+    width: 373px;
+    height: 520px;
+    background: url(/img/img-tittle/1img1.png) center no-repeat;
+    &:hover {
+        background: url(/img/img-tittle/1img1_b.png) center no-repeat;
+    }
+}
+.img-title__item2 a {
+    display: inline-block;
+    margin: 50px 0 100px 0;
+    width: 373px;
+    height: 520px;
+    background: url(/img/img-tittle/2img2.png) center no-repeat;
+    &:hover {
+        background: url(/img/img-tittle/2img2_b.png) center no-repeat;
+    }
+}
+.img-title__item3 a {
+    display: inline-block;
+    margin: 50px 0 100px 0;
+    width: 373px;
+    height: 520px;
+    background: url(/img/img-tittle/3img3.png) center no-repeat;
+    &:hover {
+        background: url(/img/img-tittle/3img3_b.png) center no-repeat;
+    }
 }
 
-
-.device {}
+// Блок - Профессиональное оборудование
+.device {
+    margin: 0 0 100px 0px;
+}
 .device__row {
     display: flex;
+    justify-content: space-between;
 }
-.device__desc {}
-.device__title {}
+.device__desc {
+    flex: 1 1 auto;
+    padding: 0 20px 0 0px;
+}
+.device__title {
+    padding-bottom: 30px;
+}
+.title {
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 23px;
+    text-transform: uppercase;
+}
+.device__text {
+    font-size: 20px;
+    line-height: 23px;
 
+}
+.devise__img {
+    flex: 0 0 767px;
+}
+.devise__img img {
+    min-width: 767px;
+}
 
-.title {}
-.device__text {}
-.devise__img {}
-
-
-.catalog {}
-.catalog__title {}
-.catalog__content {}
+// Блок - Каталог
+.catalog {
+    margin: 0 0 100px 0px;
+}
+.catalog__title {
+    margin: 0 0 20px 0px;
+}
+.catalog__content {
+    padding: 0 0 20px 0;
+}
 .catalog__row {
     display: flex;
+    flex: 0 1 50%;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: space-between;
 }
-.catalog__item {}
-
-
+.catalog__item {
+    margin: 20px 0 0 0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
 .item {}
 .item__row {
     display: flex;
+    justify-content: space-between;
 }
-.item__img {}
-.item__description {}
-.item__catalog-title {}
-.item__catalog-subtitle {}
-.catalog__button {}
-.button {}
+.item__img {
+    flex: 0 0 393px;
+}
+.item__img img{
+    min-width: 393px;
+}
+.item__description {
+    background: #22252C;
+    padding: 17px 54px 0px 16px;
+    flex: 1 1 auto;
+    width: 177px;
+}
+.item__catalog-title {
+    font-size: 15px;
+    line-height: 32px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+.item__catalog-subtitle {
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 7px;
+    color: #EC8D00;
+}
+.catalog__button {
+}
+.button {
+    a {
+        position: relative;
+        display: inline-block;
+        padding: 15px 63px 15px 33px;
+        background-color:#22252C;
+        font-weight: 900;
+        font-size: 12px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        border: 3px solid #22252C;
+        &::after {
+            content: ("");
+            position: absolute;
+            top: 14px;
+            left: 150px;
+            padding-left: 50px;
+            background: url(/img/catalog/verified11.png) center/contain no-repeat;
+            height: 25px;
+        }
+        &:hover {
+            background-color:#ffffff;
+            color: #22252C;
+            border: 3px dotted #22252C;
+            &::after {
+                background: url(/img/catalog/verified22.png) center/contain no-repeat;
+            }
+        }
+    }
+}
 
 
-.reviews {}
-.reviews__title {}
-.reviews__content {}
+// Блок - Отзывы
+.reviews {
+    padding: 0 0 100px 0;
+}
+.reviews__title {
+   padding: 0 0 20px 0;
+}
+// Отзывы/карточки
+.reviews__content {
+    padding: 0 0 20px 0;
+}
 .reviews__row {
     display: flex;
 }
-.reviews__item {}
-.item-review {}
-.item-review__row {
-    display: flex;
+.reviews__item {
+
 }
-.item-review__title {}
+.item-review {
+    flex: 1 1 25%;
+    border: 1px solid #22252C;
+}
+
+// Отзывы/карточки/ Имя + дата
+.item-review__title {
+}
 .title-review {}
 .title-review__row {
     display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
-.title-review__title {}
-.title-review__data {}
-.item-review__text {}
-.item-review__img {}
+    .title-review__title {
+        padding: 20px 5px 10px 20px;
+        font-weight: 900;
+        font-size: 10px;
+        line-height: 12px;
+        color: #EC8D00;
+    }
+    .title-review__data {
+        padding: 20px 20px 10px 5px;
+        font-size: 6px;
+        line-height: 7px;
+        text-align: right;
+        color: #C8C8C8;
+    }
+
+// Отзывы/карточки/ текст
+.item-review__text {
+    padding: 0 20px 30px 20px;
+    font-size: 10px;
+    line-height: 12px;
+}
+// Отзывы/карточки/ два визуала
+.item-review__img {
+}
 .img-rewiew {}
 .img-rewiew__row {
     display: flex;
+    justify-content: space-between;
+    margin: 0 20px 8px 20px;
 }
-.img-rewiew__item {}
-.item-review__suptitle {}
+.img-rewiew__item {
+    min-width: 111px;
+}
+// Отзывы/карточки название куба
+.item-review__suptitle {
+    justify-items: end;
+    padding: 0 0 10px 20px;
+    font-size: 6px;
+    line-height: 7px;
+    color: #C8C8C8;
+}
+
+// Отзывы/кнопка
 .reviews__button {}
 
 
@@ -210,3 +370,61 @@ body {
 .nav-footer__item {}
 .nav-footer__title-item {}
 .nav-footer__text-item {}
+
+
+
+
+
+
+
+
+
+.color__row {
+    padding: 40px;
+    display: flex;
+    flex-shrink: 0;
+    border: 5px dashed pink;
+    justify-content: space-between;
+
+}
+.red {
+    flex-shrink: 0;
+    flex-basis: 90%;
+    border: 5px dashed pink;
+    padding: 5px;
+    background-color:red;
+
+}
+.blue {
+    flex-grow: 1;
+    border: 5px dashed pink;
+    padding: 5px;
+    background-color:blue;
+}
+.green {
+    flex-grow: 1;
+    border: 5px dashed pink;
+    padding: 5px;
+    background-color:green;
+}
+.yellow {
+    flex-grow: 1;
+    border: 5px dashed pink;
+    margin: 10px;
+    padding: 5px;
+    background-color: yellow;
+}
+.black {
+    flex-grow: 1;
+    border: 5px dashed pink;
+    padding: 5px;
+    background-color: black;
+    color: white;
+}
+
+
+
+
+.r {
+    margin: 400px;
+}
