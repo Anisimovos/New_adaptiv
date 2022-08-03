@@ -26,6 +26,13 @@ body {
 .header {
     flex: 0 0 auto;
     background-color: #22252C;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 1;
+
+
 }
 .header__row {
     display: flex;
@@ -44,6 +51,8 @@ body {
 }
 .header__button {
     margin: 16px 0 17px 0;
+}
+.button-header {
     line-height: 12px;
     font-weight: 900;
     font-size: 10px;
@@ -60,7 +69,6 @@ body {
         }
     }
 }
-.button-header {}
 
 .header__nav {
 }
@@ -226,30 +234,32 @@ body {
 }
 .button {
     a {
-        position: relative;
         display: inline-block;
-        padding: 15px 63px 15px 33px;
+        padding: 15px 25px 15px 25px;
         background-color:#22252C;
         font-weight: 900;
         font-size: 12px;
-        text-align: center;
         text-transform: uppercase;
         color: #FFFFFF;
         border: 3px solid #22252C;
+        position: relative;
+        span {
+            padding-right: 40px;
         &::after {
             content: ("");
             position: absolute;
-            top: 14px;
-            left: 150px;
-            padding-left: 50px;
+            top: 15px;
+            right: 20px;
             background: url(/img/catalog/verified11.png) center/contain no-repeat;
-            height: 25px;
+            width: 28px;
+            height: 23px;
+        }
         }
         &:hover {
             background-color:#ffffff;
             color: #22252C;
             border: 3px dotted #22252C;
-            &::after {
+            span:after {
                 background: url(/img/catalog/verified22.png) center/contain no-repeat;
             }
         }
@@ -259,117 +269,196 @@ body {
 
 // Блок - Отзывы
 .reviews {
-    padding: 0 0 100px 0;
+    padding: 0 0 70px 0;
 }
+// Отзывы/заголовок
 .reviews__title {
-   padding: 0 0 20px 0;
+    padding: 0 0 20px 0;
+
 }
-// Отзывы/карточки
+//Отзывы/контентная часть
 .reviews__content {
     padding: 0 0 20px 0;
 }
-.reviews__row {
+//Отзывы/контентная часть/карточка
+.content-rewiews {
+}
+.content-rewiews__row {
     display: flex;
+    padding: 0 30px 0 0;
 }
-.reviews__item {
-
+.content-rewiews__card {
+    flex: 1 0 25%;
+    margin: 0 10px 0 0;
 }
-.item-review {
-    flex: 1 1 25%;
-    border: 1px solid #22252C;
+.card {
+    border: 1px solid  #22252C;
 }
-
-// Отзывы/карточки/ Имя + дата
-.item-review__title {
+.card__row {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 20px 20px 10px 20px;
 }
-.title-review {}
-.title-review__row {
+.card__header {
+    flex: 0 1 auto;
+    padding-bottom: 10px;
+}
+.header-card {
+}
+.header-card__row {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
 }
-    .title-review__title {
-        padding: 20px 5px 10px 20px;
-        font-weight: 900;
-        font-size: 10px;
-        line-height: 12px;
-        color: #EC8D00;
-    }
-    .title-review__data {
-        padding: 20px 20px 10px 5px;
-        font-size: 6px;
-        line-height: 7px;
-        text-align: right;
-        color: #C8C8C8;
-    }
-
-// Отзывы/карточки/ текст
-.item-review__text {
-    padding: 0 20px 30px 20px;
+.header-card__name {
+    font-weight: 900;
     font-size: 10px;
     line-height: 12px;
+    color: #EC8D00;
 }
-// Отзывы/карточки/ два визуала
-.item-review__img {
-}
-.img-rewiew {}
-.img-rewiew__row {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 20px 8px 20px;
-}
-.img-rewiew__item {
-    min-width: 111px;
-}
-// Отзывы/карточки название куба
-.item-review__suptitle {
-    justify-items: end;
-    padding: 0 0 10px 20px;
+.header-card__data {
     font-size: 6px;
     line-height: 7px;
+    text-align: right;
     color: #C8C8C8;
 }
-
+.card__text {
+    flex: 1 1 auto;
+    font-size: 10px;
+    line-height: 12px;
+    color: #22252C;
+    padding-bottom: 36px;
+}
+.card__bottom {
+    flex: 0 1 auto;
+}
+    .card__img {
+        padding-bottom: 7px;
+        margin: 0 auto;
+    }
+    .card__name {
+        font-size: 6px;
+        line-height: 7px;
+        color: #C8C8C8;
+    }
 // Отзывы/кнопка
-.reviews__button {}
+.reviews__button {
+}
+.button {
+}
 
-
-.info {}
+.info {
+    background-color: #22252C;
+}
 .info__row {
     display: flex;
+    padding: 48px 143px;
+    align-items: flex-start;
 }
-.info__item {}
+.info__item {
+    flex: 0 1 33.3333%;
+    margin-right: 15px;
+}
 .item-info {}
-.item-info__img {}
-.item-info__content {}
-.item-info__title {}
-.item-info__text {}
+.item-info__row {
+    display: flex;
+    justify-content: center;
+    align-items:baseline;
+    min-height: 64px;
+}
+    .item-info__img {
+        flex: 0 1 30px;
+        padding-right: 24px;
+        align-self: center;
+        img {
+            min-width: 30px;
+        }
+    }
+    .item-info__content {}
+        .item-info__title {
+            font-weight: 900;
+            font-size: 14px;
+            line-height: 16px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            padding-bottom: 8px;
+        }
+        .item-info__text {
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 14px;
+            color: #FFFFFF;
+            max-width: 134px;
+        }
 
 
 
 .footer {
     flex: 0 0 auto;
+    background-color: #22252C;
 }
 
 .footer__row {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.footer__logo {}
-.logo-footer {}
-.logo-footer__row {
-    display: flex;
+.footer__logo {
+    padding: 0 58px;
 }
-.logo-footer__img {}
-.logo-footer__button {}
-.logo-footer__vk {}
-.footer__nav {}
-.nav-footer {}
-.nav-footer__row {
-    display: flex;
+    .logo-footer {}
+    .logo-footer__row {
+        display: flex;
+        justify-content: space-between;
+    }
+        .logo-footer__img {
+            overflow: hidden;
+            img {
+            height: 45px;
+            padding-right: 63px;
+            }
+        }
+        .logo-footer__button {
+            padding-right: 33px;
+        }
+        .logo-footer__vk {
+                a {
+                    display: inline-block;
+                    background: #ffffff url(/img/header/Component\ 18.png) center/23px 15px no-repeat;
+                  padding: 40px 0 0;
+                    height: 45px;
+                    width: 45px;
+            &:hover {
+                    background: #22252C url(/img/header/Component\ 17.png) center/23px 15px  no-repeat;
+                }
+        }
+        }
+.footer__nav {
+    padding: 34px 0;
 }
-.nav-footer__item {}
-.nav-footer__title-item {}
-.nav-footer__text-item {}
+    .nav-footer {}
+    .nav-footer__row {
+        display: flex;
+    }
+    .nav-footer__item {
+
+    }
+        .nav-footer__title-item {
+            font-size: 12px;
+            line-height: 14px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            font-weight: 900;
+            padding: 0 101px 10px 0;
+        }
+        .nav-footer__text-item {
+            font-size: 10px;
+            line-height: 14px;
+            a {
+            color: #C8C8C8;
+            }
+        }
 
 
 
@@ -388,34 +477,34 @@ body {
 
 }
 .red {
-    flex-shrink: 0;
-    flex-basis: 90%;
+//    flex-shrink: 0;
+  //  flex-basis: 90%;
     border: 5px dashed pink;
     padding: 5px;
     background-color:red;
 
 }
 .blue {
-    flex-grow: 1;
+    //flex-grow: 1;
     border: 5px dashed pink;
     padding: 5px;
     background-color:blue;
 }
 .green {
-    flex-grow: 1;
+   // flex-grow: 1;
     border: 5px dashed pink;
     padding: 5px;
     background-color:green;
 }
 .yellow {
-    flex-grow: 1;
+   // flex-grow: 1;
     border: 5px dashed pink;
     margin: 10px;
     padding: 5px;
     background-color: yellow;
 }
 .black {
-    flex-grow: 1;
+   // flex-grow: 1;
     border: 5px dashed pink;
     padding: 5px;
     background-color: black;
